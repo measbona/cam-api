@@ -4,7 +4,10 @@ const app = express()
 let port = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
-  res.send('Welcome to CamApi. We have a collection of user path: users')
+  res.send({
+    message: 'Welcome To CamApi',
+    status: 200,
+  })
 })
 
 app.get('/users', (req, res) => {
